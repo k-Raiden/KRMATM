@@ -1,0 +1,69 @@
+﻿@model MyStarsApp.Models.CustomersViewModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>CustomersViewModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="CustomerId" />
+            <div class="form-group">
+                <label asp-for="FirstName" class="control-label"></label>
+                <input asp-for="FirstName" class="form-control" />
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LastName" class="control-label"></label>
+                <input asp-for="LastName" class="form-control" />
+                <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AccountNumber" class="control-label"></label>
+                <input asp-for="AccountNumber" class="form-control" />
+                <span asp-validation-for="AccountNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PinNumber" class="control-label"></label>
+                <input asp-for="PinNumber" class="form-control" />
+                <span asp-validation-for="PinNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Balance" class="control-label"></label>
+                <input asp-for="Balance" class="form-control" />
+                <span asp-validation-for="Balance" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NewBalance" class="control-label"></label>
+                <input asp-for="NewBalance" class="form-control" />
+                <span asp-validation-for="NewBalance" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DepositAmount" class="control-label"></label>
+                <input asp-for="DepositAmount" class="form-control" />
+                <span asp-validation-for="DepositAmount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WithdrawAmount" class="control-label"></label>
+                <input asp-for="WithdrawAmount" class="form-control" />
+                <span asp-validation-for="WithdrawAmount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

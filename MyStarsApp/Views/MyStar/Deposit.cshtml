@@ -1,0 +1,29 @@
+﻿@model MyStarsApp.Models.CustomersViewModel
+
+@{
+    ViewData["Title"] = "Deposit";
+}
+
+<h1>Deposit</h1>
+
+<div>
+    <h4>@Model.CustomerId</h4>
+
+    <h1>
+        How much  would you like to deposit from their Account!!
+    </h1>
+    <form method="post" action="~/MyStar/DepositFunds">
+
+        <input type="hidden" name="CustomerId" value="@Model.CustomerId" />
+        <div class="mb-3">
+            <label for="DepositAmount" class="form-label">Deposit Amount</label>
+            <input type="number" class="" name="DepositAmount">
+        </div>
+        <div>
+            <button class="btn btn-primary" type="submit">Save! </button>
+        </div>
+
+    </form>
+</div>
+
+
